@@ -1,0 +1,77 @@
+<div class="settings-container">
+  <h1>Ayarlar</h1>
+  <div class="section">
+    <h3>Update Your Information</h3>
+    <div class="form-container">
+      <form [formGroup]="settingsForm" (ngSubmit)="updateUserInfo()">
+        <div class="form-container-element">
+          <label for="name">Name:</label>
+          <input id="name" formControlName="name" />
+        </div>
+
+        <div class="form-container-element">
+          <label for="surname">Surname:</label>
+          <input id="surname" formControlName="surname" />
+        </div>
+
+        <div class="form-container-element">
+          <label for="email">Email:</label>
+          <input id="email" formControlName="email" />
+        </div>
+        <div>
+          <button type="submit" [disabled]="settingsForm.invalid">
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Reset Password</h3>
+    <div class="form-container">
+      <form [formGroup]="passwordForm" (ngSubmit)="changePassword()">
+        <div class="form-container-element">
+          <label for="currentPassword">Current Password:</label>
+          <input
+            type="password"
+            id="currentPassword"
+            formControlName="currentPassword"
+          />
+        </div>
+
+        <div class="form-container-element">
+          <label for="newPassword">New Password:</label>
+          <input
+            type="password"
+            id="newPassword"
+            formControlName="newPassword"
+          />
+        </div>
+
+        <div class="form-container-element">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            formControlName="confirmPassword"
+          />
+        </div>
+        <div>
+          <button type="submit" [disabled]="passwordForm.invalid">
+            Reset Password
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Delete Account</h3>
+    <div>
+      <button (click)="deleteAccount()" class="delete-button">
+        Delete Account
+      </button>
+    </div>
+  </div>
+</div>

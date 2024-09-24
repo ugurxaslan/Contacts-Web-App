@@ -1,0 +1,33 @@
+.dialog-container {
+  padding: 30px;
+}
+
+.field {
+  margin: 5px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.button {
+  padding: 5px;
+  margin: 10px 5px;
+  width: 50px;
+  border: none;
+  border-radius: 2px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #003c7d;
+}
+
+.button:disabled {
+  background-color: #cccccc; /* Sönük bir arka plan rengi */
+  color: #666666; /* Sönük bir yazı rengi */
+  cursor: not-allowed; /* İmleci sönük ve tıklanamaz olarak gösterir */
+}

@@ -1,0 +1,32 @@
+<div class="header">
+  <div class="app-name">Contact Web App</div>
+  <div class="user-info" *ngIf="userName">
+    <div class="username">{{ userName }} {{ userSurname }}</div>
+    <button
+      type="button"
+      class="settings-button"
+      *ngIf="isHome"
+      (click)="settings()"
+    >
+      Settings
+    </button>
+
+    <button
+      type="button"
+      class="settings-button"
+      *ngIf="!isHome"
+      (click)="home()"
+    >
+      Anasayfa
+    </button>
+
+    <button
+      [disabled]="isLogout"
+      type="button"
+      class="logout-button"
+      (click)="logout()"
+    >
+      Logout
+    </button>
+  </div>
+</div>

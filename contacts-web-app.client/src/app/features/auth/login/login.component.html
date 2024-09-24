@@ -1,0 +1,35 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <div class="form-container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+      <div class="form-container-element">
+        <label for="email">Email:</label>
+        <input
+          formControlName="email"
+          type="email"
+          id="email"
+          placeholder="Enter Your Email"
+        />
+      </div>
+      <div class="form-container-element">
+        <label for="password">Password:</label>
+        <input
+          formControlName="password"
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+        />
+      </div>
+      <div>
+        <button
+          class="custom-button"
+          type="submit"
+          [disabled]="!loginForm.valid || isLogin"
+        >
+          Giriş
+        </button>
+      </div>
+    </form>
+  </div>
+  <p>Hesabınız yok mu? <a routerLink="/register">Kaydol</a></p>
+</div>

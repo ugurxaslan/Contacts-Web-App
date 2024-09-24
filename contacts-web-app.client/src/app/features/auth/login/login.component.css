@@ -1,0 +1,61 @@
+.login-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column; /* İçerikleri dikeyde sıralamak */
+  align-items: center; /* Yatayda ortalamak */
+  padding: 20px; /* Etrafında biraz boşluk bırakmak için */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.form-container,
+h2,
+p {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px; /* Maksimum genişlik */
+  box-sizing: border-box;
+}
+
+.form-container-element {
+  margin-bottom: 15px;
+}
+
+.form-container-element label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-container-element input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.custom-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+}
+
+.custom-button:disabled {
+  background-color: #cccccc; /* Sönük bir arka plan rengi */
+  color: #666666; /* Sönük bir yazı rengi */
+  cursor: not-allowed; /* İmleci sönük ve tıklanamaz olarak gösterir */
+}

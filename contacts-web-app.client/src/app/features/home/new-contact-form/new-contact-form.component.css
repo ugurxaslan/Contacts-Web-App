@@ -1,0 +1,70 @@
+.new-contact-form-container {
+  display: flex;
+  justify-content: flex-end; /* İçeriği dikey olarak sağa hizalar */
+  margin-bottom: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.form-container-element {
+  margin: 1px 0px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap; /* Form elemanlarının sığmasını sağlar */
+  gap: 10px; /* Form öğeleri arasına boşluk ekler */
+}
+
+.custom-button {
+  padding: 5px 10px;
+  background-color: #0033ff;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.custom-button:disabled {
+  background-color: #cccccc; /* Sönük bir arka plan rengi */
+  color: #666666; /* Sönük bir yazı rengi */
+  cursor: not-allowed; /* İmleci sönük ve tıklanamaz olarak gösterir */
+}
+
+label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+input {
+  padding: 5px;
+}
+
+.new-contact-button {
+  padding: 5px 10px;
+  background-color: #0033ff;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.loading-spinner {
+  border: 8px solid #f3f3f3; /* Gri arka plan */
+  border-top: 8px solid #3498db; /* Mavi renkli dönen kısım */
+  border-radius: 50%; /* Daire şekli */
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite; /* Animasyonun sürekli tekrarı */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

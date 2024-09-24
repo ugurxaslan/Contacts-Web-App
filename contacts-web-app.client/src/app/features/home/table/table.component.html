@@ -1,0 +1,11 @@
+<div class="table-container">
+  <ag-grid-angular
+    class="ag-theme-quartz"
+    [rowData]="data"
+    [columnDefs]="colDefs"
+    (gridReady)="onGridReady($event)"
+    [getRowId]="getRowId"
+    [domLayout]="'normal'"
+  >
+  </ag-grid-angular>
+</div>

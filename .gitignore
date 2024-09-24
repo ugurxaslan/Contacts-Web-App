@@ -1,0 +1,37 @@
+# Node modülleri
+node_modules/
+
+# Geçici dosyalar
+obj/
+dist/
+tmp/
+
+# IDE dosyaları
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Log dosyaları
+*.log
+
+# Ortam değişkeni dosyaları
+.env
+
+# Diğer geçici dosyalar
+.DS_Store
+Thumbs.db
+
+
+# .NET ile ilgili geçici dosyalar
+bin/
+obj/
+
+# Kullanıcı ayar dosyaları
+*.user
+*.suo
+
+# IDE dosyaları
+.vscode/
+.idea/
+

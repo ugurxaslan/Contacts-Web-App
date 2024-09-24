@@ -1,0 +1,11 @@
+﻿.app-component {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.router-header {
+  flex: 1; /* Kalan alanı kaplamak için */
+  display: flex;
+}

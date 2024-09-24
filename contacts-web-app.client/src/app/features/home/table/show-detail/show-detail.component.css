@@ -1,0 +1,37 @@
+.dialog-container-1 {
+  padding: 30px;
+}
+
+.button-container-1 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+p {
+  border: 1px solid #007bff; /* Kenarlık rengi ve kalınlığı */
+  padding: 10px; /* Kenarlık ile metin arasına boşluk ekleme */
+  margin: 5px 0; /* Üst ve alt margin ayarı */
+  border-radius: 4px; /* Köşeleri yuvarlatma (isteğe bağlı) */
+  background-color: #f9f9f9; /* Kenarlık rengiyle uyumlu bir arka plan rengi */
+}
+
+.button-1 {
+  padding: 5px;
+  width: 50px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 2px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.button-1:hover {
+  background-color: #003c7d;
+}
+
+.button-1:disabled {
+  background-color: #cccccc; /* Sönük bir arka plan rengi */
+  color: #666666; /* Sönük bir yazı rengi */
+  cursor: not-allowed; /* İmleci sönük ve tıklanamaz olarak gösterir */
+}

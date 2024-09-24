@@ -1,0 +1,67 @@
+<div class="register-container">
+  <h2>Kayıt Ol</h2>
+
+  <div class="form-container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="newUserForm">
+      <div class="form-container-element">
+        <label for="name">Name:</label>
+        <input
+          formControlName="name"
+          type="text"
+          id="name"
+          placeholder="Enter Your Name"
+        />
+      </div>
+      <div class="form-container-element">
+        <label for="surname">Surname:</label>
+        <input
+          formControlName="surname"
+          type="text"
+          id="surname"
+          placeholder="Enter Your Surname"
+        />
+      </div>
+      <div class="form-container-element">
+        <label for="email">Email:</label>
+        <input
+          formControlName="email"
+          type="email"
+          id="email"
+          placeholder="Enter Your Email"
+        />
+      </div>
+      <div class="form-container-element">
+        <label for="password">Password:</label>
+        <input
+          formControlName="password"
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+        />
+      </div>
+      <div class="form-container-element">
+        <label for="repeatPassword">Repeat Password:</label>
+        <input
+          formControlName="repeatPassword"
+          type="password"
+          id="repeatPassword"
+          placeholder="Repeat Password"
+        />
+      </div>
+      <div *ngIf="newUserForm.errors?.['passwordsMismatch']">
+        Şifreler eşleşmiyor!
+      </div>
+      <div>
+        <button
+          class="custom-button"
+          type="submit"
+          [disabled]="!newUserForm.valid || isSubmiting"
+        >
+          Kayıt
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <p>Zaten hesabınız var mı? <a routerLink="/login">Login</a></p>
+</div>

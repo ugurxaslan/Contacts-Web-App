@@ -1,0 +1,16 @@
+/* Tabloyu kaplayan container */
+.table-container {
+  flex-grow: 1; /* Ekranda kalan boşluğu kaplar */
+  overflow: hidden; /* Taşmayı önler */
+  display: flex; /* İçerik yerleşimini kontrol eder */
+  flex-direction: column; /* İçeriği dikey olarak hizalar */
+}
+
+/* Ag-Grid tema stilini ayarlayın */
+.ag-theme-quartz {
+  width: 100%; /* Tablo container'ının genişliği */
+  height: calc(
+    100vh - 170px
+  ); /* Tablo container'ının yüksekliği: Ekranın %100'ü */
+  box-sizing: border-box; /* Kenarlık ve padding'in toplam genişlik ve yüksekliği etkilemesini sağlar */
+}

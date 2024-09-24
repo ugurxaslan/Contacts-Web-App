@@ -1,0 +1,6 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Kalan alanı kaplamak için */
+  overflow: hidden; /* İçeriğin taşmasını önler */
+}

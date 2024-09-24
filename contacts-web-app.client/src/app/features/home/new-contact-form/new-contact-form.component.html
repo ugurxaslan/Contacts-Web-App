@@ -1,0 +1,51 @@
+<div class="new-contact-form-container">
+  <div class="button-container">
+    <button
+      class="new-contact-button"
+      (click)="toggleForm()"
+      *ngIf="!formVisible && !loading"
+    >
+      New Contact
+    </button>
+  </div>
+
+  <div *ngIf="formVisible" class="form-container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="newContactForm">
+      <div class="form-container-element">
+        <label for="name">Name:</label>
+        <input formControlName="name" type="text" id="name" />
+      </div>
+      <div class="form-container-element">
+        <label for="surname">Surname:</label>
+        <input formControlName="surname" type="text" id="surname" />
+      </div>
+      <div class="form-container-element">
+        <label for="email">Email:</label>
+        <input formControlName="email" type="email" id="email" />
+      </div>
+      <div class="form-container-element">
+        <label for="phone">Phone:</label>
+        <input
+          formControlName="phone"
+          type="number"
+          id="phone"
+          placeholder="05xx..."
+        />
+      </div>
+      <div>
+        <button
+          class="custom-button"
+          type="submit"
+          [disabled]="!newContactForm.valid"
+        >
+          Kayıt
+        </button>
+        <button class="custom-button" type="button" (click)="cancel()">
+          İptal
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div *ngIf="loading" class="loading-spinner"></div>
+</div>
